@@ -1,8 +1,30 @@
+"use client"
+
+import { Ijdata } from "@/type/Type";
+import axios from "axios";
+import  Main  from "./../components/Main";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  const [jdata,setJdata] = useState<Ijdata[]>([])
+
+  useEffect(()=>{
+  axios.get("http://localhost:3011/data").then((res)=>(
+  setJdata(res.data)
+  ))
+  },[])
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <h3>test</h3>
+    <div className="">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
+
+        {jdata.map(res=>(
+          <div key={res.id}>
+
+          <Main  {...res}/>
+          </div>
+        ))}
+        </div>
     </div>
   );
 }

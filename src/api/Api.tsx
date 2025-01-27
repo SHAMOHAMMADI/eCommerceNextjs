@@ -2,8 +2,9 @@
 
 
 import ProductItem from '@/components/ProductItem'
-import { IApi } from '@/type/Type'
+import { IApi, Ijdata } from '@/type/Type'
 import axios from 'axios'
+import { Main } from 'next/document'
 import React, { useEffect, useState } from 'react'
 
 function FakeApi() {
@@ -16,6 +17,13 @@ function FakeApi() {
     })
     },[])
  
+    const [jdata , setJdata] = useState<Ijdata[]>([])
+    useEffect(()=>{
+     axios.get("http://localhost:3011/data").then((res)=>{
+        setJdata(res.data)
+     })
+    },[])
+
 
  
     
@@ -26,6 +34,10 @@ function FakeApi() {
         <ProductItem key={res.id} {...res}/>
      ))
 
+}  
+{jdata.map((res)=>(
+        <Main key={res.id} {...res}/>
+    ))
 }
     </div>
 )

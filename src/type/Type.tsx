@@ -15,4 +15,13 @@ export interface IApi {
     rate?: number
     count?: number
   }
+
+
+  export interface Ijdata {
+    id : string ,
+    image : string , 
+    Description : string , 
+    title : string
+
+  }
   

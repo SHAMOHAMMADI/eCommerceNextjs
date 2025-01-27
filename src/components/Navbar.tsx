@@ -30,6 +30,11 @@ function Navbar() {
         </Link>
       ))}
       </div>
+      <div>
+        <Link href="/cart">
+        <span>سبد خرید</span>
+        </Link>
+      </div>
       </Container>
     </div>
   );
