@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ShoppingCartContextProvider from "@/context/ShoppingCartContext";
 
 
 
@@ -20,9 +21,12 @@ export default function RootLayout({
       <body
         className=""
       >
+        <ShoppingCartContextProvider>
+
         <Navbar/>
         {children}
         <Footer/>
+        </ShoppingCartContextProvider>
       </body>
     </html>
   );

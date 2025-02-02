@@ -1,4 +1,5 @@
 import React from "react";
+import AddToCart from "./AddToCart";
 
 function CartItems() {
   return (
@@ -7,9 +8,10 @@ function CartItems() {
         <div className="col-span-9 p-6 text-right">
           <h2>اسم محصول</h2>
           <p>تعداد</p>
-          <p>
-            قیمت محصول : <span>45$</span>
-          </p>
+          <h3 className="">
+          <span> $قیمت محصول : 45</span>
+          </h3>
+          <AddToCart/>
         </div>
         <div className="col-span-3">
           <img 
