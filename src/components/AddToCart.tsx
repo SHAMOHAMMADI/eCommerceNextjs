@@ -1,7 +1,7 @@
 "use client"
 
-import  { Cartitems, useShoppingCartContext } from '@/context/ShoppingCartContext'
-import React, { useContext } from 'react'
+import  { useShoppingCartContext } from '@/context/ShoppingCartContext'
+import React from 'react'
 
 interface  IAddToCart {
     id: string 
@@ -21,8 +21,7 @@ function AddToCart({id}:IAddToCart) {
               -
             </button>
           </div>
-          
-
+          <span className = "mx-4">{getProductQty(parseInt(id))}</span>
           <button className="text-white bg-blue-700 px-6 m-2 rounded">
             خرید
           </button>

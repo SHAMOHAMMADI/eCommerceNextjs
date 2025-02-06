@@ -14,7 +14,8 @@ export type Cartitems = {
 type TShoppingCartContext = {
     cartItems : Cartitems[],
     handleIncreaseProductQty:(id:number)=> void,
-    getProductQty : (id:number)=>number
+    getProductQty : (id:number)=>number,
+    cartTotalQty: number
 
 }
   const ShoppingCartContext = createContext({} as TShoppingCartContext)
@@ -28,9 +29,13 @@ type TShoppingCartContext = {
 
     const [cartItems , setCartItems] = useState<Cartitems[]>([])
 
+    const cartTotalQty = cartItems.reduce((totalQty , item)=>{
+         return totalQty + item.qty
+    },0)
+
     const handleIncreaseProductQty = (id:number) => {
         setCartItems((currenttItem)=>{
-            let isNotProductExist = currenttItem.find((item)=>item.id) == null
+            const isNotProductExist = currenttItem.find((item)=>item.id == id) == null
             if(isNotProductExist){
                 return [...currenttItem , {id:id , qty:1}]
             }else {

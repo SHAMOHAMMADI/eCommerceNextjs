@@ -1,5 +1,5 @@
 import React from "react";
-import AddToCart from "./AddToCart";
+// import AddToCart from "./AddToCart";
 
 function CartItems() {
   return (
@@ -11,14 +11,14 @@ function CartItems() {
           <h3 className="">
           <span> $قیمت محصول : 45</span>
           </h3>
-          <AddToCart/>
+          {/* <AddToCart/> */}
         </div>
         <div className="col-span-3">
-          <img 
+          {/* <img 
           className="h-full rounded-r-md"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVrq_5GlnVyzzb3LKUPvmoYJrMaQ5nhr8J2x3LvuvHqCxhvyw_qoW4dHnOLccc2feUZFM&usqp=CAU"
             alt=""
-          />
+          /> */}
         </div>
       </div>
     </div>

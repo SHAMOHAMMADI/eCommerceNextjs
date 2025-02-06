@@ -17,7 +17,7 @@ export default async function Home() {
   // },[])
 
   //server component method--------------
-  const result = await fetch("http://localhost:3011/data")
+  const result = await fetch("http://localhost:3001/data")
   const jdata = await result.json() as Ijdata[]
 
   

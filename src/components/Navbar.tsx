@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import  Container  from "./Container";
 import React from "react";
+import { useShoppingCartContext } from "@/context/ShoppingCartContext";
 
 function Navbar() {
 
@@ -18,7 +19,8 @@ function Navbar() {
       title: "فروشگاه",
     },
   ];
-
+const {cartTotalQty} = useShoppingCartContext()
+console.log(cartTotalQty , "hello")
   return (
     <div className=" m-auto flex border shadow-inner rounded bg-slate-100 h-16 justify-evenly items-center">
         <Container>
@@ -32,7 +34,7 @@ function Navbar() {
       </div>
       <div>
         <Link href="/cart">
-        <span>سبد خرید</span>
+        <span>سبد خرید</span><span>{cartTotalQty}</span>
         </Link>
       </div>
       </Container>
