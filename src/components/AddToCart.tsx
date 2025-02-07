@@ -7,7 +7,7 @@ interface  IAddToCart {
     id: string 
 }
 function AddToCart({id}:IAddToCart) {
-    const {cartItems , handleIncreaseProductQty,getProductQty} = useShoppingCartContext()
+    const {cartItems , handleIncreaseProductQty,getProductQty , getRemoveProduct , handleDecreaseProductQty} = useShoppingCartContext()
 
     console.log(cartItems)
   return (
@@ -17,13 +17,13 @@ function AddToCart({id}:IAddToCart) {
               +
             </button>
              {getProductQty(parseInt(id))}
-            <button className="text-white bg-blue-700 px-6 m-2 rounded">
+            <button onClick={()=>handleDecreaseProductQty(parseInt(id))} className="text-white bg-blue-700 px-6 m-2 rounded">
               -
             </button>
           </div>
           <span className = "mx-4">{getProductQty(parseInt(id))}</span>
-          <button className="text-white bg-blue-700 px-6 m-2 rounded">
-            خرید
+          <button   onClick={()=>getRemoveProduct(parseInt(id))} className="text-white bg-[#ff0000] px-6 m-2 rounded">
+            حذف
           </button>
     </div>
   )
