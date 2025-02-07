@@ -1,6 +1,7 @@
 import { IApi } from "@/type/Type";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import AddToCart from "./AddToCart";
 // import AddToCart from "./AddToCart";
 
 interface ICartItems {
@@ -19,8 +20,9 @@ const [data , setData] = useState({} as IApi)
   axios.get(`https://fakestoreapi.com/products/${id}`).then((result)=>{
     setData(result.data)
   })
+  
+},[])
 
- },[])
 
 
   return (
@@ -36,10 +38,11 @@ const [data , setData] = useState({} as IApi)
         </div>
         <div className="col-span-3">
           <img 
-          className="h-48 rounded-r-md"
+          className="h-48 rounded-r-md m-2"
             src={data.image}
             alt=""
           />
+          <AddToCart id={id.toString()}/>
         </div>
       </div>
     </div>
