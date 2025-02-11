@@ -5,7 +5,7 @@ import AddToCart from "@/components/AddToCart";
 
 interface IProductProps {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{}>;
+  // searchParams: Promise<{}>;
 }
 
 console.log();
