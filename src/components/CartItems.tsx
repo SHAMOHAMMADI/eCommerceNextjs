@@ -32,7 +32,7 @@ const [data , setData] = useState({} as IApi)
           <h2>{data.description}</h2>
           <p>تعداد</p>
           <h3 className="">
-          <span> $قیمت محصول : 45</span>
+          <span> $قیمت محصول :{data?.price}</span>
           </h3>
           {/* <AddToCart/> */}
         </div>

@@ -15,6 +15,9 @@ export interface IApi {
     count?: number
   }
 
+  export interface Idiscount{
+    discount(formatNumberWithCommas:number,number:number):number
+  }
 
   export interface Ijdata {
     id : string ,

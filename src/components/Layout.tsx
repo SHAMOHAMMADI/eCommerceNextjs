@@ -5,7 +5,7 @@ interface ILayoutProps {
 }
 function Layout({children}:ILayoutProps) {
   return (
-    <div>{children}</div>
+    <div >{children}</div>
   )
 }
 
