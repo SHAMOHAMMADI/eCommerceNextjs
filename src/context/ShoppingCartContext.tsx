@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 type ShoppingCartContextProviderProps = {
   children: React.ReactNode;
@@ -33,6 +33,16 @@ export default function ShoppingCartContextProvider({
     return totalQty + item.qty;
   }, 0);
 
+  useEffect(()=>{
+  const storedCartItems = localStorage.getItem("cartItems")
+
+  if(storedCartItems){
+    setCartItems(JSON.parse(storedCartItems))
+  }
+  },[])
+  useEffect(()=>{
+localStorage.setItem("cartItems",JSON.stringify (cartItems))
+  },[cartItems])
   const handleIncreaseProductQty = (id: number) => {
     setCartItems((currenttItem) => {
       const isNotProductExist =
