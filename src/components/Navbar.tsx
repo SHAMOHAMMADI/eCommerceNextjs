@@ -16,6 +16,10 @@ function Navbar() {
       href: "/store",
       title: "فروشگاه",
     },
+    {
+      href: "/dashboard",
+      title: "داشبورد",
+    }
   ];
   const { cartTotalQty } = useShoppingCartContext();
   console.log(cartTotalQty, "hello");

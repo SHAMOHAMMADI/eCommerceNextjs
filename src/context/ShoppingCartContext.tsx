@@ -38,7 +38,7 @@ export default function ShoppingCartContextProvider({
 
   if(storedCartItems){
     setCartItems(JSON.parse(storedCartItems))
-  }
+  } 
   },[])
   useEffect(()=>{
 localStorage.setItem("cartItems",JSON.stringify (cartItems))

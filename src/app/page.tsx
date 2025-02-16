@@ -23,7 +23,7 @@ export default async function Home() {
   
   return (
     <div className="">
-      <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="border min-h-8 border-red-600 grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
 
         {jdata.map(res=>(
           <div key={res.id}>
