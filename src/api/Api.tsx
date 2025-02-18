@@ -1,6 +1,4 @@
-"use client"
-
-
+"use client";
 import ProductItem from '@/components/ProductItem'
 import { IApi, Ijdata } from '@/type/Type'
 import axios from 'axios'

@@ -1,5 +1,4 @@
 "use client";
-// import AddToCart from "@/components/AddToCart";
 import CartItems from "@/components/CartItems";
 import Container from "@/components/Container";
 import { useShoppingCartContext } from "@/context/ShoppingCartContext";
