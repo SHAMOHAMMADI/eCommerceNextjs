@@ -1,10 +1,20 @@
 import { Ijdata } from '@/type/Type'
 import React from 'react'
+import Image from "next/image"
 
-function Main({id,image,Description,title}:Ijdata) {
+function Main({image,Description,title}:Ijdata) {
+
+  // console.log("test")
+
   return (
     <div className="flex flex-col border inner-shadow p-2 rounded">
-<img src={image} alt="" className="w-72"/>
+<Image
+src={image ?? "/11.jpg"} 
+width={48}
+height={48}
+alt="" 
+className="w-72"
+ />
 <div className="flex flex-col items-center">
 
 <h3>{Description}</h3>

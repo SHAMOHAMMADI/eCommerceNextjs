@@ -1,5 +1,5 @@
 "use client";
-import AddToCart from "@/components/AddToCart";
+// import AddToCart from "@/components/AddToCart";
 import CartItems from "@/components/CartItems";
 import Container from "@/components/Container";
 import { useShoppingCartContext } from "@/context/ShoppingCartContext";
@@ -31,15 +31,15 @@ function Cart() {
       setData(data);
     });
   }, []);
-  let totalPrice = cartItems.reduce((total, item) => {
-    let selectedProduct = data.find((product) => product.id == item.id);
+  const totalPrice = cartItems.reduce((total, item) => {
+    const selectedProduct = data.find((product) => product.id == item.id);
     return total + (selectedProduct?.price || 0) * item.qty;
   }, 0);
   const handleSubmitDiscount = () => {
     axios.get(`http://localhost:3001/discount?code=${discount}`).then((res) => {
       const data = res.data as IDiscountData[];
-      let discountPrice = (totalPrice * data[0].percentage) / 100;
-      let finalPrice = totalPrice - discountPrice;
+      const discountPrice = (totalPrice * data[0].percentage) / 100;
+      const finalPrice = totalPrice - discountPrice;
       setFinalPrice(finalPrice);
       setDisconutPrice(discountPrice);
     });
@@ -78,7 +78,7 @@ function Cart() {
           />
           <span>تخفیف:{discountPrice}</span>
           <p>
-            قیمت نهایی : {formatNumberWithCommas(finalPrice.toFixed(2))}
+            قیمت نهایی : {formatNumberWithCommas(finalPrice)}
             <span></span>
           </p>
           <button

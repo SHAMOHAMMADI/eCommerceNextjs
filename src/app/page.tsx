@@ -2,7 +2,7 @@
 
 import { Ijdata } from "@/type/Type";
 // import axios from "axios";
-import  Main  from "./../components/Main";
+// import  Main  from '@/components/Main'
 // import { useEffect, useState } from "react";
 
 export default async function Home() {
@@ -28,7 +28,7 @@ export default async function Home() {
         {jdata.map(res=>(
           <div key={res.id}>
 
-          <Main  {...res}/>
+          {/* <Main  {...res}/> */}
           </div>
         ))}
         </div>

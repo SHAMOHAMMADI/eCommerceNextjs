@@ -3,27 +3,23 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import AddToCart from "./AddToCart";
 // import AddToCart from "./AddToCart";
+import Image from 'next/image';
 
 interface ICartItems {
-  id : number ,
-  qty : number
+  id: number;
+  qty: number;
 }
 
+function CartItems({ id }: ICartItems) {
+  const [data, setData] = useState({} as IApi);
 
+  useEffect(() => {
+    axios.get(`https://fakestoreapi.com/products/${id}`).then((result) => {
+      setData(result.data);
+    });
+  }, []);
 
-function CartItems({id , qty}:ICartItems) {
-
-const [data , setData] = useState({} as IApi)
-
-
- useEffect(()=>{
-  axios.get(`https://fakestoreapi.com/products/${id}`).then((result)=>{
-    setData(result.data)
-  })
-  
-},[])
-
-
+  console.log("test")
 
   return (
     <div>
@@ -32,17 +28,17 @@ const [data , setData] = useState({} as IApi)
           <h2>{data.description}</h2>
           <p>تعداد</p>
           <h3 className="">
-          <span> $قیمت محصول :{data?.price}</span>
+            <span> $قیمت محصول :{data?.price}</span>
           </h3>
           {/* <AddToCart/> */}
         </div>
         <div className="col-span-3">
-          <img 
-          className="h-48 rounded-r-md m-2"
-            src={data.image}
-            alt=""
-          />
-          <AddToCart id={id.toString()}/>
+          {/* <img src={data.image} alt="" className="h-48 rounded-r-md m-2" /> */}
+          {
+          
+          <Image src={data?.image ?? "/11.jpg"} width={48} height={48} style={{margin:2}} alt="noImage" unoptimized/>
+          }
+          <AddToCart id={id.toString()} />
         </div>
       </div>
     </div>

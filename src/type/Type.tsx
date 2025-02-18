@@ -24,6 +24,5 @@ export interface IApi {
     image : string , 
     Description : string , 
     title : string
-
   }
   

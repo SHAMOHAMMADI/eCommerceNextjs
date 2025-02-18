@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 import Container from "../../components/Container";
-import React, { ChangeEvent, ChangeEventHandler, useEffect, useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 
 function Dashboard() {
   const [newProduct, setNewProduct] = useState({

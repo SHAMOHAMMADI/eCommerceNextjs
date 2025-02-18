@@ -4,7 +4,7 @@
 import ProductItem from '@/components/ProductItem'
 import { IApi, Ijdata } from '@/type/Type'
 import axios from 'axios'
-import { Main } from 'next/document'
+import  Main  from '@/components/Main'
 import React, { useEffect, useState } from 'react'
 
 function FakeApi() {
