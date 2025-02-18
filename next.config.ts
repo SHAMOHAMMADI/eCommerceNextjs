@@ -8,12 +8,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "fakestoreapi.com",
         
-      },
-      {
-        protocol: "http",
-        hostname: "localhost",
-        
-      },
+      }
     ],
   },
 };
