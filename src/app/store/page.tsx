@@ -24,11 +24,11 @@ const product = await result.json() as IApi[]
 
 
   return (
-    <div className="m-2 grid gap-4 grid-cols-3 ">
+    <div className=" grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full mb-36 ">
 {product.map((res)=>(
-  <Link key={res.id} href={`/store/${res.id}`}>
+  <div key={res.id}>
    <ProductItem {...res}/>
-  </Link>
+  </div>
 ))}
     </div>
   )

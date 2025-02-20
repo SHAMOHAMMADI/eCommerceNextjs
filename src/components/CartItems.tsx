@@ -36,7 +36,7 @@ function CartItems({ id }: ICartItems) {
           {/* <img src={data.image} alt="" className="h-48 rounded-r-md m-2" /> */}
           {
           
-          <Image src={data?.image ?? "/11.jpg"} width={48} height={48} style={{margin:2}} alt="noImage" unoptimized/>
+          <Image className="w-36 flex justify-center items-center mx-auto" src={data?.image ?? "/11.jpg"} width={48} height={48}  alt="noImage" unoptimized/>
           }
           <AddToCart id={id.toString()} />
         </div>

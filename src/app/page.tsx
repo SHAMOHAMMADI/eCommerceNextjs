@@ -1,5 +1,6 @@
 // "use client"
 
+import ProductItem from "@/components/ProductItem";
 import { Ijdata } from "@/type/Type";
 // import axios from "axios";
 // import  Main  from '@/components/Main'
@@ -29,8 +30,10 @@ export default async function Home() {
           <div key={res.id}>
 
           {/* <Main  {...res}/> */}
+
           </div>
         ))}
+        <ProductItem/>
         </div>
     </div>
   );
