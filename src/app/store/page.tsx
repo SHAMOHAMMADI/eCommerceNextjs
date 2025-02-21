@@ -3,7 +3,7 @@
 import ProductItem from '@/components/ProductItem'
 import { IApi } from '@/type/Type'
 // import axios from 'axios'
-import Link from 'next/link'
+// import Link from 'next/link'
 // import React, { useEffect, useState } from 'react'
 
 async function Store() {
@@ -19,6 +19,7 @@ async function Store() {
 const result = await fetch("https://fakestoreapi.com/products")
 const product = await result.json() as IApi[]
 
+console.log(product)
 
 
 

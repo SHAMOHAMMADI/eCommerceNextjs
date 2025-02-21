@@ -8,7 +8,7 @@ function ProductItem({id,image , price, category, title }: IApi) {
     <div className="border shadow-inner py-4 my-4 flex h-full flex-col items-center justify-center">
       {/* <img src={image} alt="" className="w-48 h-52 m-4" /> */}
       <Image 
-       src={image ?? "/11.jpg"} 
+       src={image??"/11.jpg"} 
        width={36}
        height={36}
        alt="noImage"

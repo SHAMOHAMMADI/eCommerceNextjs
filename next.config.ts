@@ -1,16 +1,27 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+// const nextConfig: NextConfig = {
+//   /* config options here */
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: "https",
+//         hostname: "localhost",
+
+//       }
+//     ],
+//   },
+// };
+
+// export default nextConfig;
+
+// next.config.js
+module.exports = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "fakestoreapi.com",
-        
-      }
+    domains: [
+      "encrypted-tbn0.gstatic.com",
+      "fakestoreapi.com",
+      "letsenhance.io",
     ],
   },
 };
-
-export default nextConfig;

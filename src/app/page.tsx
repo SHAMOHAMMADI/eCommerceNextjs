@@ -3,7 +3,7 @@
 import ProductItem from "@/components/ProductItem";
 import { Ijdata } from "@/type/Type";
 // import axios from "axios";
-// import  Main  from '@/components/Main'
+import  Main  from '@/components/Main'
 // import { useEffect, useState } from "react";
 
 export default async function Home() {
@@ -24,16 +24,15 @@ export default async function Home() {
   
   return (
     <div className="">
-      <div className="border min-h-8 border-red-600 grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className=" h-fit grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
 
         {jdata.map(res=>(
-          <div key={res.id}>
+          <div  key={res.id}>
 
-          {/* <Main  {...res}/> */}
+          <Main  {...res}/>
 
           </div>
         ))}
-        <ProductItem/>
         </div>
     </div>
   );
