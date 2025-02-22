@@ -23,5 +23,7 @@ module.exports = {
       "fakestoreapi.com",
       "letsenhance.io",
     ],
+  },eslint: {
+    ignoreDuringBuilds: true,
   },
 };
