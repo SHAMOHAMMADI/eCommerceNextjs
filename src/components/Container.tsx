@@ -4,7 +4,7 @@ interface IContainer {
 }
 function Container({children}:IContainer) {
   return (
-    <div className="container mx-auto" >{children}</div>
+    <div className="container h-screen mx-auto" >{children}</div>
   )
 }
 

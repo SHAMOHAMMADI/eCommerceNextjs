@@ -1,6 +1,6 @@
 // "use client"
 
-import ProductItem from "@/components/ProductItem";
+// import ProductItem from "@/components/ProductItem";
 import { Ijdata } from "@/type/Type";
 // import axios from "axios";
 import  Main  from '@/components/Main'

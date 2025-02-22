@@ -17,7 +17,7 @@ function CartItems({ id }: ICartItems) {
     axios.get(`https://fakestoreapi.com/products/${id}`).then((result) => {
       setData(result.data);
     });
-  }, []);
+  }, [id]);
 
   console.log("test")
 

@@ -2,6 +2,7 @@ import { IApi } from "@/type/Type";
 import Container from "@/components/Container";
 import React from "react";
 import AddToCart from "@/components/AddToCart";
+import Image from "next/image";
 
 interface IProductProps {
   params: Promise<{ id: string }>;
@@ -27,7 +28,13 @@ async function Product({ params }: IProductProps) {
           </div>
         </div>
         <div className="col-span-3 m-2 flex flex-col justify-center items-center">
-          <img src={data.image} alt="" className="w-36" />
+          {/* <img src={data.image} alt="" className="w-36" /> */}
+          <Image
+            src={data.image ?? '/11.jpg'}
+            width={96}
+            height={72}
+            alt="noImage" 
+          />
           <AddToCart id={id}/>
         </div>
       </div>
