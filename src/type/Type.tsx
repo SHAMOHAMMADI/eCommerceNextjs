@@ -9,6 +9,17 @@ export interface IApi {
     image?: string
     rating?: ApiRating
   }
+
+  export interface jdataWithpagination {
+data : Ijdata[]
+first: number | null
+items: number | null
+last: number | null
+next: number | null
+pages: number 
+prev : number | null
+
+  }
   
   export interface ApiRating {
     rate?: number

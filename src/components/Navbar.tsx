@@ -24,7 +24,7 @@ function Navbar() {
   const { cartTotalQty } = useShoppingCartContext();
   console.log(cartTotalQty, "hello");
   return (
-    <div className=" m-auto flex border shadow-inner rounded bg-slate-100 h-16 justify-evenly items-center">
+    <div className="h-16  m-auto flex border shadow-inner rounded bg-slate-100 justify-center items-center">
       <Container>
         <div className="flex flex-row-reverse ">
           {navlinks.map((item) => (
@@ -37,12 +37,14 @@ function Navbar() {
             </Link>
           ))}
         </div>
-          <div className="absolute top-4 left-4 border rounded shadow-inner p-2 hover:bg-blue-400 hover:text-white duration-700">
-            <Link href="/cart">
-              <span >سبد خرید</span>
-              <span className="m-2  px-2 bg-[#ff0000] text-white rounded-full absolute -left-3 -top-5">{cartTotalQty ? cartTotalQty : ""}</span>
-            </Link>
-          </div>
+        <div className="absolute top-4 left-4 border rounded shadow-inner p-2 hover:bg-blue-400 hover:text-white duration-700">
+          <Link href="/cart">
+            <span>سبد خرید</span>
+            <span className="m-2  px-2 bg-[#ff0000] text-white rounded-full absolute -left-3 -top-5">
+              {cartTotalQty ? cartTotalQty : ""}
+            </span>
+          </Link>
+        </div>
       </Container>
     </div>
   );

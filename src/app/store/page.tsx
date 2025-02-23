@@ -16,7 +16,7 @@ async function Store() {
   //    })
   // },[])
 
-const result = await fetch("https://fakestoreapi.com/products")
+const result = await fetch(`https://fakestoreapi.com/products?_page=1_per_page=5`)
 const product = await result.json() as IApi[]
 
 console.log(product)
