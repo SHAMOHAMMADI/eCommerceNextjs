@@ -10,12 +10,16 @@ import Pangination from "@/components/Pangination";
 // import { useEffect, useState } from "react";
 interface IStoredProps {
   params?: Promise<number>;
-  searchParams: Promise<{ page: string; per_page: string }>;
+  searchParams: Promise<{ page: string; per_page: string; title:string }>;
 }
 export default async function Home({ searchParams }: IStoredProps) {
   const page = (await searchParams).page ?? "1";
   const per_page = (await searchParams).per_page ?? "5";
-  console.log(page, per_page);
+  const title = (await searchParams).title ?? "" 
+
+
+
+
   //client component------------
   // const [jdata,setJdata] = useState<Ijdata[]>([])
   // useEffect(()=>{
@@ -26,13 +30,14 @@ export default async function Home({ searchParams }: IStoredProps) {
 
   //server component method--------------
   const result = await fetch(
-    `http://localhost:3001/data?_page=${page}&_per_page=${per_page}`
+    `http://localhost:3001/data?_page=${page}&_per_page=${per_page}&title=${title}`
   );
   const jdata = (await result.json()) as jdataWithpagination;
 
   return (
     <Container>
-      <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 my-4">
+
         {jdata.data.map((res) => (
           <div key={res.id}>
             <Main {...res} />
