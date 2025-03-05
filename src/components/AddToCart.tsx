@@ -2,7 +2,6 @@
 
 import { useShoppingCartContext } from "@/context/ShoppingCartContext";
 // import localStorage from 'local-storage'
-import React from "react";
 
 interface IAddToCart {
   id: string;
@@ -16,7 +15,6 @@ function AddToCart({ id }: IAddToCart) {
     handleDecreaseProductQty,
   } = useShoppingCartContext();
   // localStorage.setItem("id",cartItems)
-  console.log(cartItems);
   return (
     <div>
       <div className="flex ">

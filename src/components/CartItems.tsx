@@ -19,7 +19,6 @@ function CartItems({ id }: ICartItems) {
     });
   }, [id]);
 
-  console.log("test")
 
   return (
     <div>

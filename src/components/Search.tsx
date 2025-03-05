@@ -19,7 +19,7 @@ function Search() {
   };
 
   return (
-    <div className="flex justify-start items-center ">
+    <div className="flex">
       <input
         onChange={(e) => setSearch(e.target.value)}
         type="text"

@@ -53,21 +53,21 @@
       "image": "/image/all037.jpg",
       "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of",
       "description": "the picture of galaxy",
-      "price": "sd200"
+      "discount": "sd200"
     },
     {
       "id": "9",
       "image": "/image/all059.jpg",
       "title": "iran text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of",
       "description": "the picture of galaxy",
-      "price": "sd200"
+      "discount": "sd200"
     },
     {
       "id": "10",
       "image": "/image/all060.jpg",
       "title": "iran",
       "description": "the picture of galaxy",
-      "price": "sd200"
+      "discount": "sd200"
     },
     {
       "id": "11",
@@ -94,22 +94,22 @@
       "id": "14",
       "image": "/image/all064.jpg",
       "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of",
-      "description": "the picture of galaxy",
-      "price": "sd200"
+      "Description": "the picture of galaxy",
+      "discount": "200"
     },
     {
       "id": "15",
       "image": "/image/all065.jpg",
       "title": "iran text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of",
-      "description": "the picture of galaxy",
-      "price": "sd200"
+      "Description": "the picture of galaxy",
+      "discount": "300"
     },
     {
       "id": "16",
       "image": "/image/arduino1.jpg",
       "title": "iran",
-      "description": "the picture of galaxy",
-      "price": "sd200"
+      "Description": "the picture of galaxy",
+      "discount": "400"
     }
   ],
   "discount": [{
@@ -129,14 +129,12 @@
     }
   ],
 
-  "orders": [{
-      "id": "1",
-      "cartItems": [],
-      "address": "",
-      "user": "",
-      "status": "pending"
-    },
-    {},
-    {}
+  "orders": [
+ 
+  ],
+  "users":[{
+
+  }
+  
   ]
 }
