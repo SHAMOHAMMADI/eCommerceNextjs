@@ -19,7 +19,6 @@ async function Store() {
     `https://fakestoreapi.com/products?_page=1_per_page=5`
   );
   const product = (await result.json()) as IApi[];
-
   return (
     <div className=" grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full mb-36 ">
       {product.map((res) => (

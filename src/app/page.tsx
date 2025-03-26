@@ -6,12 +6,15 @@ import { jdataWithpagination } from "@/type/Type";
 import Main from "@/components/Main";
 import Container from "@/components/Container";
 import Pangination from "@/components/Pangination";
+import { importFakeStoreData } from "@/import/Import";
 // import { SearchParams } from "next/dist/server/request/search-params";
 // import { useEffect, useState } from "react";
 interface IStoredProps {
   params?: Promise<number>;
   searchParams: Promise<{ page: string; per_page: string; title:string }>;
 }
+
+
 export default async function Home({ searchParams }: IStoredProps) {
   const page = (await searchParams).page ?? "1";
   const per_page = (await searchParams).per_page ?? "5";
@@ -30,7 +33,7 @@ export default async function Home({ searchParams }: IStoredProps) {
 
   //server component method--------------
   const result = await fetch(
-    `http://localhost:3001/data?_page=${page}&_per_page=${per_page}&title=${title}`
+    `http://localhost:3011/data?_page=${page}&_per_page=${per_page}&title=${title}`
   );
   const jdata = (await result.json()) as jdataWithpagination;
 
@@ -45,7 +48,6 @@ export default async function Home({ searchParams }: IStoredProps) {
         ))}
       </div>
       <div className="">
-
       <Pangination pageCount={jdata.pages}/>
       </div>
     </Container>
